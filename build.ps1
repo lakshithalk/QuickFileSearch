@@ -17,6 +17,7 @@ New-Item -ItemType Directory -Force (Join-Path $root 'dist') | Out-Null
 $out = Join-Path $root 'dist\QuickFileSearch.exe'
 
 Invoke-ps2exe -inputFile (Join-Path $root 'QuickFileSearch.ps1') -outputFile $out `
+    -iconFile (Join-Path $root 'app.ico') `
     -noConsole -STA -x64 `
     -title 'Quick File Search' `
     -description 'Small Windows file search tool with basic file type filters' `
